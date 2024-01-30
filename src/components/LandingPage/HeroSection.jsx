@@ -30,39 +30,39 @@ const HeroSection = () => {
         </Col>
         <Col className="col-10 col-lg-7 ">
           <span
-            className="p-2 mx-2 radius-50 secondary-text"
+            className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover1(true)}
             onMouseLeave={() => isHover1(false)}
           >
-            <Instagram className={hover1 === true ? "gray-text" : ""} />
+            <Instagram className={hover1 === true ? "dark-text" : ""} />
           </span>
           <span
-            className="p-2 mx-2 radius-50 secondary-text"
+            className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover2(true)}
             onMouseLeave={() => isHover2(false)}
           >
-            <Telephone className={hover2 === true ? "gray-text" : ""} />
+            <Telephone className={hover2 === true ? "dark-text" : ""} />
           </span>
           <span
-            className="p-2 mx-2 radius-50 secondary-text"
+            className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover3(true)}
             onMouseLeave={() => isHover3(false)}
           >
-            <Envelope className={hover3 === true ? "gray-text" : ""} />
+            <Envelope className={hover3 === true ? "dark-text" : ""} />
           </span>
           <span
-            className="p-2 mx-2 radius-50 secondary-text"
+            className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover4(true)}
             onMouseLeave={() => isHover4(false)}
           >
-            <Linkedin className={hover4 === true ? "gray-text" : ""} />
+            <Linkedin className={hover4 === true ? "dark-text" : ""} />
           </span>
           <span
-            className="p-2 mx-2 radius-50 secondary-text"
+            className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover5(true)}
             onMouseLeave={() => isHover5(false)}
           >
-            <Instagram className={hover5 === true ? "gray-text" : ""} />
+            <Instagram className={hover5 === true ? "dark-text" : ""} />
           </span>
         </Col>
       </Row>

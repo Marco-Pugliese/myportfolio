@@ -44,6 +44,9 @@ body {
   transition: all 1.1s;
   color: var(--main-gray) !important;
 }
+.dark-text {
+  color: var(--main-dark) !important;
+}
 .resume {
   background-color: var(--main-contrast);
   color: var(--main-dark) !important;
@@ -91,7 +94,7 @@ body {
 }
 .radius-50:hover {
   cursor: pointer;
-  background-color: var(--main-secondary) !important;
+  background-color: var(--main-contrast) !important;
   scale: 1.2;
 }
 
