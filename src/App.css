@@ -14,6 +14,16 @@ body,
 #root {
   height: 100%;
 }
+#mydiv {
+  transition: all 0.8s linear;
+}
+.pointer {
+  transition: all 0.8s;
+}
+.pointer:hover {
+  cursor: pointer;
+  color: var(--main-secondary) !important;
+}
 #top {
   height: 66vh;
   background: linear-gradient(
@@ -31,7 +41,47 @@ body {
     #16161a 0%,
     #16161a 100%
   );
+
   font-family: var(--main-font);
+  overflow-x: hidden;
+}
+.stickyHeader {
+  transition: all 0.8s;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  padding: 13px 0;
+}
+.bgsolid {
+  transition: all 0.8s;
+  background-color: #16161a;
+  border-bottom: 2px solid var(--main-gray);
+}
+.bgsolid:hover {
+  border-color: var(--main-contrast);
+}
+.darker-bg {
+  background-color: #303034d0 !important;
+  border: 1.6px solid var(--main-contrast);
+}
+.navtop {
+  transition: all 0.8s;
+}
+.navtop:hover {
+  cursor: pointer;
+  scale: 1.05;
+  color: var(--main-secondary);
+}
+.small {
+  font-size: 0.9em;
+}
+.smaller {
+  font-size: 0.8em;
+}
+.extrasmall {
+  font-size: 0.75em;
 }
 #rest {
   height: 100%;
@@ -47,15 +97,25 @@ body {
 .dark-text {
   color: var(--main-dark) !important;
 }
+.light-text {
+  transition: all 0.8s;
+  color: var(--main-light) !important;
+}
 .resume {
   background-color: var(--main-contrast);
   color: var(--main-dark) !important;
   font-size: 0.9em;
+  transition: all 0.8s;
+}
+.resume:hover {
+  background-color: var(--main-secondary);
+  color: var(--main-light) !important;
+  cursor: pointer;
 }
 .selected {
   color: var(--main-contrast) !important;
   font-weight: 500;
-  font-size: 1.4em;
+  scale: 1.2 !important ;
 }
 #bag * {
   color: var(--main-dark) !important;
@@ -63,6 +123,36 @@ body {
 #modalbody {
   height: 86.9vh;
   background-color: transparent !important;
+}
+.gray-bg {
+  background-color: var(--main-gray) !important;
+}
+.numberInCont {
+  transition: all 0.8s;
+  color: #ffffff0d;
+  border-color: #ffffff0d !important;
+}
+.carousel-indicators,
+.carousel-control-prev,
+.carousel-control-next {
+  display: none !important;
+}
+
+.light-border {
+  border-color: var(--main-light) !important;
+  transition: all 0.8s;
+}
+.gray-border {
+  border-color: var(--main-gray) !important;
+  transition: all 0.8s;
+}
+.dark-border {
+  border-color: var(--main-dark) !important;
+  transition: all 0.8s;
+}
+.ishoverCont {
+  color: #5439a352;
+  border-color: #5439a352 !important;
 }
 .modal-content {
   background-color: transparent !important;
@@ -81,11 +171,26 @@ body {
 .contrast-text {
   color: var(--main-contrast) !important;
 }
+.contrast-bg {
+  background-color: var(--main-contrast) !important;
+}
 .a-left {
   position: relative;
   left: -4px;
 }
+.conthover {
+  transition: all 0.8s;
+}
+.conthover:hover {
+  background-color: var(--main-secondary) !important;
+  border-color: var(--main-light) !important;
+  color: var(--main-light) !important;
+  cursor: pointer;
+}
+
 .radius-50 {
+  background-color: var(--main-contrast) !important;
+  color: var(--main-dark) !important;
   display: inline-block;
   border-radius: 50%;
   height: 40px;
@@ -94,8 +199,13 @@ body {
 }
 .radius-50:hover {
   cursor: pointer;
-  background-color: var(--main-contrast) !important;
+  background-color: var(--main-secondary) !important;
+  box-shadow: 0px 0px 33px -15px var(--main-light);
+
   scale: 1.2;
+}
+.hoverContShadow:hover {
+  box-shadow: 0px 0px 33px 35px var(--main-light) !important;
 }
 
 .focus-in-contract {
@@ -169,9 +279,39 @@ body {
     background-color: var(--main-secondary);
   }
 }
+.border-shadow-gray {
+  background-color: transparent !important;
+  border-color: var(--main-gray) !important;
+  padding-bottom: 15px;
+  box-shadow: 0px 15px 15px -6px #2cb67d8a;
+  animation: colorShadowChange 4s linear infinite alternate-reverse both;
+}
+@keyframes colorShadowChange {
+  0% {
+    box-shadow: 0px 15px 15px -6px #2cb67d8a;
+  }
+  100% {
+    box-shadow: 0px 15px 15px -6px #7f5af0;
+  }
+}
 .color-change-2y {
   animation: color-change-2y 4s linear infinite alternate-reverse both;
   z-index: 2;
+}
+.width-changing {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  animation: widthChanging 24s linear infinite alternate-reverse both;
+}
+@keyframes widthChanging {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 5%;
+  }
 }
 @keyframes color-change-2y {
   0% {
@@ -180,4 +320,52 @@ body {
   100% {
     color: var(--main-secondary);
   }
+}
+.transparency1 {
+  opacity: 0;
+  animation: transparency 9s linear infinite;
+}
+.transparency2 {
+  opacity: 0;
+  animation: transparency 9s linear infinite 3s;
+}
+.transparency3 {
+  opacity: 0;
+  animation: transparency 9s linear infinite 6s;
+}
+@keyframes transparency {
+  0% {
+    opacity: 1;
+    color: var(--main-contrast);
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+}
+.smallpadding {
+  padding: 2px;
+}
+#mydiv {
+  width: 400vw;
+  display: flex;
+
+  color: var(--main-gray);
+}
+#mydiv > div {
+  width: 100vw;
+}
+.minus25 {
+  margin-left: -100vw;
+}
+.minus50 {
+  margin-left: -200vw;
+}
+.minus75 {
+  margin-left: -300vw;
+}
+.zero {
+  margin-left: 0;
 }
