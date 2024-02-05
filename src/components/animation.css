@@ -1,0 +1,139 @@
+.focus-in-contract {
+  animation: focus-in-contract 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@keyframes focus-in-contract {
+  0% {
+    letter-spacing: 1em;
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.flicker-2 {
+  animation: flicker-2 2s linear infinite both;
+}
+@keyframes flicker-2 {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  41.99% {
+    opacity: 1;
+  }
+  42% {
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+  }
+  43.01% {
+    opacity: 1;
+  }
+  45.99% {
+    opacity: 1;
+  }
+  46% {
+    opacity: 0;
+  }
+  46.9% {
+    opacity: 0;
+  }
+  46.91% {
+    opacity: 1;
+  }
+  51.99% {
+    opacity: 1;
+  }
+  52% {
+    opacity: 0;
+  }
+  52.8% {
+    opacity: 0;
+  }
+  52.81% {
+    opacity: 1;
+  }
+}
+
+.color-change-2x {
+  animation: color-change-2x 4s linear infinite alternate-reverse both;
+  z-index: 2;
+}
+@keyframes color-change-2x {
+  0% {
+    background-color: var(--main-contrast);
+  }
+  100% {
+    background-color: var(--main-secondary);
+  }
+}
+.border-shadow-gray {
+  background-color: transparent !important;
+  border-color: var(--main-gray) !important;
+  padding-bottom: 15px;
+  box-shadow: 0px 15px 15px -6px #2cb67d8a;
+  animation: colorShadowChange 4s linear infinite alternate-reverse both;
+}
+@keyframes colorShadowChange {
+  0% {
+    box-shadow: 0px 15px 15px -6px #2cb67d8a;
+  }
+  100% {
+    box-shadow: 0px 15px 15px -6px #7f5af0;
+  }
+}
+.width-changing {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  animation: widthChanging 24s linear infinite alternate-reverse both;
+}
+@keyframes widthChanging {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 5%;
+  }
+}
+.color-change-2y {
+  animation: color-change-2y 4s linear infinite alternate-reverse both;
+  z-index: 2;
+}
+@keyframes color-change-2y {
+  0% {
+    color: var(--main-contrast);
+  }
+  100% {
+    color: var(--main-secondary);
+  }
+}
+
+.transparency1 {
+  opacity: 0;
+  animation: transparency 9s linear infinite;
+}
+.transparency2 {
+  opacity: 0;
+  animation: transparency 9s linear infinite 3s;
+}
+.transparency3 {
+  opacity: 0;
+  animation: transparency 9s linear infinite 6s;
+}
+@keyframes transparency {
+  0% {
+    opacity: 1;
+    color: var(--main-contrast);
+  }
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+}

@@ -12,7 +12,11 @@ function App() {
   const currentPage = useSelector((state) => state.Page.pageSelected[0]);
   return (
     <div className="App">
-      <Container fluid id="top" className="color-change-2x position-relative">
+      <Container
+        fluid
+        id="top"
+        className="color-change-2x position-relative px-0"
+      >
         <Header className="position-absolute" />
 
         <div

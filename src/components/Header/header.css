@@ -1,0 +1,9 @@
+.stickyHeader {
+  transition: all 0.8s;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100vw;
+  padding: 13px 0;
+}

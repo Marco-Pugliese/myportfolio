@@ -5,6 +5,7 @@ import {
   CodeSlash,
   Envelope,
   FiletypeJsx,
+  Github,
   Instagram,
   Linkedin,
   Telephone,
@@ -39,13 +40,6 @@ const HeroSection = () => {
         <Col className="col-10 col-lg-7 ">
           <span
             className="p-2 mx-2 radius-50 contrast-text"
-            onMouseEnter={() => isHover1(true)}
-            onMouseLeave={() => isHover1(false)}
-          >
-            <Instagram className={hover1 === true ? "light-text" : ""} />
-          </span>
-          <span
-            className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover2(true)}
             onMouseLeave={() => isHover2(false)}
           >
@@ -57,6 +51,13 @@ const HeroSection = () => {
             onMouseLeave={() => isHover3(false)}
           >
             <Envelope className={hover3 === true ? "light-text" : ""} />
+          </span>
+          <span
+            className="p-2 mx-2 radius-50 contrast-text"
+            onMouseEnter={() => isHover1(true)}
+            onMouseLeave={() => isHover1(false)}
+          >
+            <Github className={hover1 === true ? "light-text" : ""} />
           </span>
           <span
             className="p-2 mx-2 radius-50 contrast-text"
