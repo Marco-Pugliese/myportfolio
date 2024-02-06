@@ -74,7 +74,7 @@ const Header = () => {
                   dispatch(switchSectionAction("About Me"));
                 }}
               >
-                About Me
+                Works
               </span>
               <span
                 className={
@@ -86,7 +86,7 @@ const Header = () => {
                   dispatch(switchSectionAction("Education"));
                 }}
               >
-                Works & Education
+                Education
               </span>
               <span
                 className={

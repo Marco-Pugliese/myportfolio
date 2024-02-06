@@ -137,3 +137,11 @@
     opacity: 0;
   }
 }
+.rotate-animation-180 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  animation: widthChanging 24s linear infinite alternate-reverse both;
+  transform: rotate(180deg);
+}

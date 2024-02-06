@@ -204,9 +204,13 @@ body {
   box-shadow: 0px 0px 33px 35px var(--main-light) !important;
 }
 
-text-area:focus {
-  box-shadow: transparent !important;
-  border-color: transparent !important;
+text-area:focus,
+.input-group-text:focus,
+text-area:active,
+.input-group-text:active {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: none !important;
 }
 .smallpadding {
   padding: 2px;
