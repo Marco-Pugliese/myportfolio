@@ -235,3 +235,8 @@ text-area:active,
 .zero {
   margin-left: 0;
 }
+#bardooCarousel,
+#loremWeatherCarousel,
+#NetFlicsCarousel {
+  height: 35vh;
+}
