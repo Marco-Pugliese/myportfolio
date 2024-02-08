@@ -30,8 +30,8 @@ body,
   height: 66vh;
   background: linear-gradient(
     to bottom right,
-    rgba(255, 255, 255, 0) -150%,
-    #16161a 50%,
+    rgba(255, 255, 255, 0) -100%,
+    #16161a 51%,
     #16161a 100%
   );
   font-family: var(--main-font);
@@ -159,6 +159,7 @@ body {
 }
 .secondary-text {
   color: var(--main-secondary) !important;
+  transition: all 0.8s;
 }
 .secondary-bg {
   background-color: var(--main-secondary) !important;
@@ -166,6 +167,7 @@ body {
 
 .contrast-text {
   color: var(--main-contrast) !important;
+  transition: all 0.8s;
 }
 .contrast-bg {
   background-color: var(--main-contrast) !important;
@@ -239,4 +241,35 @@ text-area:active,
 #loremWeatherCarousel,
 #NetFlicsCarousel {
   height: 35vh;
+}
+
+.imgtobechanged {
+  margin-top: 250px;
+}
+#loremWeatherCarousel > div,
+#NetFlicsCarousel > div,
+#bardooCarousel > div,
+.udemy > div,
+img[alt~="epi-degree"] {
+  background: transparent;
+  box-shadow: 0 0 30px -10px var(--main-contrast);
+  transition: all 0.8s;
+}
+#loremWeatherCarousel > div:hover,
+#NetFlicsCarousel > div:hover,
+#bardooCarousel > div:hover {
+  box-shadow: 0 0 50px -10px var(--main-secondary);
+  cursor: pointer;
+  scale: 1.05;
+}
+.udemy > div:hover,
+img[alt~="epi-degree"]:hover {
+  box-shadow: 0 0 50px -10px var(--main-secondary);
+  cursor: pointer;
+  scale: 1.03;
+}
+.lilscale {
+  display: inline-block;
+  scale: 1.05;
+  transition: all 0.8s;
 }

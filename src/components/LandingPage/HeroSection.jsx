@@ -23,7 +23,7 @@ const HeroSection = () => {
   const [hoverCont3, isHoverCont3] = useState(false);
 
   return (
-    <Container className="py-5">
+    <Container className="py-5 position-relative">
       <Row className="justify-content-center text-center py-5">
         <Col className="col-10 col-lg-7 py-5">
           <div className="fs-3 text-gray">
@@ -225,6 +225,9 @@ const HeroSection = () => {
             </Col>
           </Row>
         </Col>
+      </Row>
+      <Row>
+        <Col></Col>
       </Row>
     </Container>
   );

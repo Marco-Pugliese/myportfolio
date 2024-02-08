@@ -2,7 +2,7 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 
 const Education = () => {
   return (
-    <Container>
+    <Container id="education">
       <Row className="py-5 align-items-center">
         <Col className="col-5 text-center px-4">
           <div className="fs-4 fw-bold ">Education</div>
@@ -107,12 +107,12 @@ const Education = () => {
           </div>
         </Col>
         <Col>
-          <Carousel fade className="py-2 text-center">
+          <Carousel fade className="py-2 text-center udemy">
             <Carousel.Item>
               <img
                 src="/assets/media/pic/The Web Developer Bootcamp 2023 - Colt Steele.jpeg"
                 alt="The Web Developer Bootcamp 2023 - Colt Steele"
-                className="w-100 rounded-2"
+                className="w-100 rounded-2 "
               />
             </Carousel.Item>
             <Carousel.Item>
