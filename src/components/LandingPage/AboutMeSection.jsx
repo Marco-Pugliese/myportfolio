@@ -191,34 +191,41 @@ const AboutMeSection = () => {
             UI.
           </div>
         </Col>
-        <Col className="d-lg-none ">
-          <Carousel fade className="p-0 text-center rounded-4">
-            <Carousel.Item className="rounded-4">
+        <Col className="d-lg-none rounded-4 loremWeatherCarousel">
+          <Carousel
+            fade
+            className="p-0 text-center rounded-4"
+            onMouseLeave={() => {
+              setLoremWeatherHover(false);
+            }}
+            onMouseEnter={() => setLoremWeatherHover(true)}
+          >
+            <Carousel.Item className="rounded-4 ">
               <img
                 src="/assets/media/works/loremWeather.png"
                 alt="loremWeather"
                 className="w-100 rounded-4 "
               />
             </Carousel.Item>
-            <Carousel.Item className="rounded-4">
+            <Carousel.Item>
               <img
                 src="/assets/media/works/loremWeather2.png"
                 alt="loremWeather"
                 className="w-100 rounded-4 "
               />
             </Carousel.Item>
-            <Carousel.Item className="rounded-4">
+            <Carousel.Item>
               <img
                 src="/assets/media/works/loremWeather3.png"
                 alt="loremWeather"
                 className="w-100 rounded-4 "
               />
             </Carousel.Item>
-            <Carousel.Item className="rounded-4">
+            <Carousel.Item>
               <img
                 src="/assets/media/works/loremWeather4.png"
                 alt="loremWeather"
-                className="w-100 rounded-4"
+                className="w-100 rounded-4 "
               />
             </Carousel.Item>
           </Carousel>

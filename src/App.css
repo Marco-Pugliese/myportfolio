@@ -247,6 +247,7 @@ text-area:active,
   margin-top: 250px;
 }
 #loremWeatherCarousel > div,
+.loremWeatherCarousel > div,
 #NetFlicsCarousel > div,
 #bardooCarousel > div,
 .udemy > div,
@@ -256,12 +257,14 @@ img[alt~="epi-degree"] {
   transition: all 0.8s;
 }
 #loremWeatherCarousel > div:hover,
+.loremWeatherCarousel > div:hover,
 #NetFlicsCarousel > div:hover,
 #bardooCarousel > div:hover {
   box-shadow: 0 0 50px -10px var(--main-secondary);
   cursor: pointer;
   scale: 1.05;
 }
+
 .udemy > div:hover,
 img[alt~="epi-degree"]:hover {
   box-shadow: 0 0 50px -10px var(--main-secondary);
