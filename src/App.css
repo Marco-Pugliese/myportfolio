@@ -276,3 +276,6 @@ img[alt~="epi-degree"]:hover {
   scale: 1.05;
   transition: all 0.8s;
 }
+.pointer:hover {
+  cursor: pointer;
+}

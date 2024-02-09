@@ -5,7 +5,7 @@ const ContactMe = () => {
   return (
     <Container>
       {" "}
-      <div>
+      <div className="py-5 mt-5">
         <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
         <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div>
       </div>
@@ -36,11 +36,11 @@ const ContactMe = () => {
           </div>
         </Col>
       </Row>
-      <div>
+      <div className="py-5 mt-5">
         <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
         <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div>
       </div>
-      <Row className="py-5 align-items-center">
+      <Row className="py-5 mt-5 align-items-center">
         <Col className="col-6">
           <InputGroup className="border-change">
             <InputGroup.Text

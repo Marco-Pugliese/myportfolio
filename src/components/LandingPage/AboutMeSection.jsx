@@ -17,8 +17,13 @@ const AboutMeSection = () => {
             <span
               className={
                 bardooHover === true
-                  ? "secondary-text fst-italic navtop "
-                  : "contrast-text fst-italic"
+                  ? "secondary-text fst-italic navtop pointer"
+                  : "contrast-text fst-italic pointer"
+              }
+              onClick={() =>
+                window.open(
+                  "https://github.com/Marco-Pugliese/epicode-capstone"
+                )
               }
             >
               Bardoo{" "}
@@ -41,6 +46,9 @@ const AboutMeSection = () => {
             setBardooHover(false);
           }}
           onMouseEnter={() => setBardooHover(true)}
+          onClick={() =>
+            window.open("https://github.com/Marco-Pugliese/epicode-capstone")
+          }
         >
           <Carousel fade className="p-0 text-center rounded-4">
             <Carousel.Item>
@@ -133,6 +141,9 @@ const AboutMeSection = () => {
               setLoremWeatherHover(false);
             }}
             onMouseEnter={() => setLoremWeatherHover(true)}
+            onClick={() =>
+              window.open("https://github.com/Marco-Pugliese/loremweather")
+            }
           >
             <Carousel.Item className="rounded-4 ">
               <img
@@ -164,7 +175,6 @@ const AboutMeSection = () => {
             </Carousel.Item>
           </Carousel>
         </Col>
-
         <Col className="col-12 col-lg-5 text-center px-4 pb-4 mb-5">
           <div className="fs-4 fw-bold "> EPICODE Exam 12</div>
           <div className="d-flex text-center">
@@ -174,8 +184,11 @@ const AboutMeSection = () => {
             <span
               className={
                 loremWeatherHover === true
-                  ? "secondary-text fst-italic navtop "
-                  : "contrast-text fst-italic"
+                  ? "secondary-text fst-italic navtop pointer"
+                  : "contrast-text fst-italic pointer"
+              }
+              onClick={() =>
+                window.open("https://github.com/Marco-Pugliese/loremweather")
               }
             >
               LoremWeather{" "}
@@ -199,6 +212,9 @@ const AboutMeSection = () => {
               setLoremWeatherHover(false);
             }}
             onMouseEnter={() => setLoremWeatherHover(true)}
+            onClick={() =>
+              window.open("https://github.com/Marco-Pugliese/loremweather")
+            }
           >
             <Carousel.Item className="rounded-4 ">
               <img
@@ -241,8 +257,13 @@ const AboutMeSection = () => {
             <span
               className={
                 netflixCloneHover === true
-                  ? "secondary-text fst-italic navtop "
-                  : "contrast-text fst-italic"
+                  ? "secondary-text fst-italic navtop pointer"
+                  : "contrast-text fst-italic pointer"
+              }
+              onClick={() =>
+                window.open(
+                  "https://github.com/Marco-Pugliese/U3-W1-L5---netflixclone"
+                )
               }
             >
               Netflix Clone{" "}
@@ -262,6 +283,11 @@ const AboutMeSection = () => {
             setNetflixCloneHover(false);
           }}
           onMouseEnter={() => setNetflixCloneHover(true)}
+          onClick={() =>
+            window.open(
+              "https://github.com/Marco-Pugliese/U3-W1-L5---netflixclone"
+            )
+          }
         >
           <Carousel fade className="p-0 text-center rounded-4 ">
             <Carousel.Item className="rounded-4">
