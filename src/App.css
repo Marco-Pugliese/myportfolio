@@ -279,3 +279,29 @@ img[alt~="epi-degree"]:hover {
 .pointer:hover {
   cursor: pointer;
 }
+.myBtn1 {
+  background-color: var(--main-contrast);
+  color: var(--main-light);
+  border: 2px solid var(--main-contrast);
+  transition: all 0.8s;
+}
+.myBtn1:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: var(--main-secondary);
+  color: var(--main-light);
+  border-color: var(--main-secondary);
+}
+.myBtn2 {
+  background-color: var(--main-light);
+  color: var(--main-secondary);
+  border: 2px solid var(--main-light);
+  transition: all 0.8s;
+}
+.myBtn2:hover {
+  cursor: pointer;
+  scale: 1.1;
+  background-color: var(--main-secondary);
+  color: var(--main-light);
+  border-color: var(--main-secondary);
+}
