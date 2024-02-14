@@ -1,7 +1,7 @@
-import { Col, Container, Form, InputGroup, Row } from "react-bootstrap";
+import { Col, Container, InputGroup, Row } from "react-bootstrap";
 import { Envelope, Github, Linkedin } from "react-bootstrap-icons";
-import emailjs, { send } from "@emailjs/browser";
-import { useEffect, useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 
 const ContactMe = () => {
   const form = useRef();

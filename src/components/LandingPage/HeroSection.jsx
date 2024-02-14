@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Modal, Row } from "react-bootstrap";
 import {
   Braces,
   CodeSlash,
@@ -21,6 +21,12 @@ const HeroSection = () => {
   const [hoverCont1, isHoverCont1] = useState(false);
   const [hoverCont2, isHoverCont2] = useState(false);
   const [hoverCont3, isHoverCont3] = useState(false);
+  const [show1, setShow1] = useState(false);
+  const [show2, setShow2] = useState(false);
+  const handleClose1 = () => setShow1(false);
+  const handleShow1 = () => setShow1(true);
+  const handleClose2 = () => setShow2(false);
+  const handleShow2 = () => setShow2(true);
 
   return (
     <Container className="py-5 position-relative">
@@ -42,6 +48,7 @@ const HeroSection = () => {
             className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover2(true)}
             onMouseLeave={() => isHover2(false)}
+            onClick={handleShow1}
           >
             <Telephone className={hover2 === true ? "light-text" : ""} />
           </span>
@@ -49,6 +56,7 @@ const HeroSection = () => {
             className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover3(true)}
             onMouseLeave={() => isHover3(false)}
+            onClick={handleShow2}
           >
             <Envelope className={hover3 === true ? "light-text" : ""} />
           </span>
@@ -56,6 +64,9 @@ const HeroSection = () => {
             className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover1(true)}
             onMouseLeave={() => isHover1(false)}
+            onClick={() => {
+              window.open("https://github.com/Marco-Pugliese");
+            }}
           >
             <Github className={hover1 === true ? "light-text" : ""} />
           </span>
@@ -63,6 +74,9 @@ const HeroSection = () => {
             className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover4(true)}
             onMouseLeave={() => isHover4(false)}
+            onClick={() => {
+              window.open("https://www.linkedin.com/in/marco-pugliese-dev/");
+            }}
           >
             <Linkedin className={hover4 === true ? "light-text" : ""} />
           </span>
@@ -70,6 +84,9 @@ const HeroSection = () => {
             className="p-2 mx-2 radius-50 contrast-text"
             onMouseEnter={() => isHover5(true)}
             onMouseLeave={() => isHover5(false)}
+            onClick={() => {
+              window.open("https://www.instagram.com/______lessismore/");
+            }}
           >
             <Instagram className={hover5 === true ? "light-text" : ""} />
           </span>
@@ -229,6 +246,18 @@ const HeroSection = () => {
       <Row>
         <Col></Col>
       </Row>
+      <>
+        <Modal show={show1} onHide={handleClose1} className="rounded-3">
+          <Modal.Body className="secondary-bg light-text py-5 mt-5 rounded-3 text-center">
+            <Telephone /> +38 3382510605
+          </Modal.Body>
+        </Modal>
+        <Modal show={show2} onHide={handleClose2} className="rounded-3">
+          <Modal.Body className="secondary-bg light-text py-5 mt-5 rounded-3 text-center">
+            <Envelope /> : pugliesemarco@myyahoo.com
+          </Modal.Body>
+        </Modal>
+      </>
     </Container>
   );
 };
