@@ -2,6 +2,7 @@ import { Col, Container, InputGroup, Row } from "react-bootstrap";
 import { Envelope, Github, Linkedin } from "react-bootstrap-icons";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
+import Icons from "./Icons";
 
 const ContactMe = () => {
   const form = useRef();
@@ -242,6 +243,9 @@ const ContactMe = () => {
           </Row>
         </Container>
       </form>
+      <Container id="icons-wrap" className="mt-4">
+        <Icons />
+      </Container>
     </Container>
   );
 };

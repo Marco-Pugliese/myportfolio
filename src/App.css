@@ -47,7 +47,9 @@ body {
   font-family: var(--main-font);
   overflow-x: hidden;
 }
-
+#train {
+  background: linear-gradient(to right, #16161a 0%, transparent 100%);
+}
 .bgsolid {
   transition: all 0.8s;
   background-color: #16161a;
@@ -305,4 +307,14 @@ img[alt~="epi-degree"]:hover {
   background-color: var(--main-secondary);
   color: var(--main-light);
   border-color: var(--main-secondary);
+}
+
+#icons img {
+  width: 66px;
+  padding: 2px;
+  margin: 0 10px;
+}
+
+#icons-wrap {
+  height: 70vh;
 }

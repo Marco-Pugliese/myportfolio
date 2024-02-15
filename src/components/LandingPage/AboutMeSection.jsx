@@ -247,7 +247,7 @@ const AboutMeSection = () => {
           </Carousel>
         </Col>
       </Row>
-      <Row className="py-5 align-items-center ">
+      <Row className="py-5 align-items-center z-2">
         <Col className="col-12 col-lg-5 text-center px-4 pb-4">
           <div className="fs-4 fw-bold "> EPICODE Exam 11</div>
           <div className="d-flex text-center">

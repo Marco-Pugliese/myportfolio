@@ -11,6 +11,7 @@ import {
   Telephone,
 } from "react-bootstrap-icons";
 import MyCarousel from "./MyCarousel";
+import Icons from "./Icons";
 
 const HeroSection = () => {
   const [hover1, isHover1] = useState(false);
@@ -248,16 +249,28 @@ const HeroSection = () => {
       </Row>
       <>
         <Modal show={show1} onHide={handleClose1} className="rounded-3">
-          <Modal.Body className="secondary-bg light-text py-5 mt-5 rounded-3 text-center">
-            <Telephone /> +38 3382510605
+          <Modal.Body className="secondary-bg light-text py-5 mt-5 rounded-3 d-flex justify-content-center align-items-center">
+            <Telephone className="me-1" />:
+            <a href="tel:+39 3382510605" className="nav-link ps-1">
+              3382510605
+            </a>
           </Modal.Body>
         </Modal>
         <Modal show={show2} onHide={handleClose2} className="rounded-3">
-          <Modal.Body className="secondary-bg light-text py-5 mt-5 rounded-3 text-center">
-            <Envelope /> : pugliesemarco@myyahoo.com
+          <Modal.Body className="secondary-bg light-text py-5 mt-5 rounded-3 d-flex justify-content-center align-items-center">
+            <Envelope className="me-1" /> :
+            <a
+              href="mailto: pugliesemarco@myyahoo.com"
+              className="nav-link ps-1"
+            >
+              pugliesemarco@myyahoo.com
+            </a>
           </Modal.Body>
         </Modal>
       </>
+      <Container id="icons-wrap" className="mt-4">
+        <Icons />
+      </Container>
     </Container>
   );
 };
