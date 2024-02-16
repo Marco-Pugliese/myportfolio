@@ -8,16 +8,19 @@
   --main-secondary: #7f5af0;
   --main-contrast: #2cb67d;
   --main-font: "Montserrat", sans-serif;
-  /* font-family: "Lato", sans-serif; */
-  /* font-family: "Poppins", sans-serif; */
 }
-html,
-body,
-#root {
-  height: 100%;
+
+body {
+  width: 400vw;
 }
 #mydiv {
   transition: all 0.8s linear;
+  display: flex;
+  color: var(--main-gray);
+}
+
+#mydiv > div {
+  width: 100vw;
 }
 .pointer {
   transition: all 0.8s;
@@ -27,11 +30,10 @@ body,
   color: var(--main-secondary) !important;
 }
 #top {
-  height: 66vh;
   background: linear-gradient(
-    to bottom right,
+    to bottom,
     rgba(255, 255, 255, 0) -100%,
-    #16161a 51%,
+    #16161a 50%,
     #16161a 100%
   );
   font-family: var(--main-font);
@@ -79,10 +81,7 @@ body {
 .extrasmall {
   font-size: 0.75em;
 }
-#rest {
-  height: 100%;
-  background-color: var(--main-dark) !important;
-}
+
 .text-gray {
   color: var(--main-gray) !important;
 }
@@ -119,10 +118,7 @@ body {
 #bag * {
   color: var(--main-dark) !important;
 }
-#modalbody {
-  height: 86.9vh;
-  background-color: transparent !important;
-}
+
 .gray-bg {
   background-color: var(--main-gray) !important;
 }
@@ -220,14 +216,7 @@ text-area:active,
 .smallpadding {
   padding: 2px;
 }
-#mydiv {
-  width: 400vw;
-  display: flex;
-  color: var(--main-gray);
-}
-#mydiv > div {
-  width: 100vw;
-}
+
 .minus25 {
   margin-left: -100vw;
 }
@@ -239,11 +228,6 @@ text-area:active,
 }
 .zero {
   margin-left: 0;
-}
-#bardooCarousel,
-#loremWeatherCarousel,
-#NetFlicsCarousel {
-  height: 35vh;
 }
 
 .imgtobechanged {
@@ -308,13 +292,15 @@ img[alt~="epi-degree"]:hover {
   color: var(--main-light);
   border-color: var(--main-secondary);
 }
-
-#icons img {
-  width: 66px;
-  padding: 2px;
-  margin: 0 10px;
+#cvImg {
+  width: 140%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(-100px);
 }
 
-#icons-wrap {
-  height: 70vh;
-}
+/* 
+PER EVITARE NELLA SEZIONE MOBILE UNA VISUALIZZAZIONE INCORRETTA DEL CV DOVRO' INVERTIRE LA VISUALIZZAZIONE DEL CV CON IL DOWNLOAD:
+TOCCA CERCARE UN PACKAGE NPM PER IL DOWNLOAD DEL PDF
+*/

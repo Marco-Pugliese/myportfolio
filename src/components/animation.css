@@ -149,30 +149,3 @@
   animation: widthChanging 24s linear infinite alternate-reverse both;
   transform: rotate(180deg);
 }
-
-.rotate-center {
-  animation: rotate-center 15s linear infinite both;
-}
-
-@keyframes rotate-center {
-  0% {
-    opacity: 0;
-    position: relative;
-    left: -100vw;
-  }
-  15% {
-    opacity: 1;
-  }
-
-  85% {
-    position: relative;
-    opacity: 1;
-    z-index: 0;
-  }
-  100% {
-    position: relative;
-    left: 100vw;
-    opacity: 0;
-    z-index: 0;
-  }
-}

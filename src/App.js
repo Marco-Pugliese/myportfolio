@@ -1,12 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import Header from "./components/Header/Header";
-import HeroSection from "./components/LandingPage/HeroSection";
 import { Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import AboutMeSection from "./components/LandingPage/AboutMeSection";
 import Education from "./components/LandingPage/Education";
 import ContactMe from "./components/LandingPage/ContactMe";
+import HeroSection from "./components/LandingPage/HeroSection";
 
 function App() {
   const currentPage = useSelector((state) => state.Page.pageSelected[0]);
@@ -17,7 +17,7 @@ function App() {
         id="top"
         className="color-change-2x position-relative px-0"
       >
-        <Header className="position-absolute" />
+        <Header />
 
         <div
           id="mydiv"
@@ -47,7 +47,6 @@ function App() {
           </div>
         </div>
       </Container>
-      <Container fluid className="flex-grow-1" id="rest"></Container>
     </div>
   );
 }

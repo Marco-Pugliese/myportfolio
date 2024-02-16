@@ -92,9 +92,9 @@ const ContactMe = () => {
           e.preventDefault();
         }}
       >
-        <Container>
-          <Row className="py-5 mt-5">
-            <Col className="col-12 col-lg-6">
+        <Container className="mt-5 pt-5">
+          <Row className="pt-5 mt-5">
+            <Col className="col-12 col-lg-6 mt-5">
               <InputGroup className="border-change">
                 <InputGroup.Text
                   className="bg-transparent light-text"
@@ -117,9 +117,9 @@ const ContactMe = () => {
                   }}
                 />
               </InputGroup>
-              <div className="py-2"></div>
+              <div className="py-3"></div>
             </Col>
-            <Col className="col-12 col-lg-6">
+            <Col className="col-12 col-lg-6 mt-5">
               <InputGroup className="border-change">
                 <InputGroup.Text
                   className="bg-transparent light-text"
@@ -141,7 +141,7 @@ const ContactMe = () => {
                   }}
                 />
               </InputGroup>
-              <div className="py-2"></div>
+              <div className="py-3"></div>
             </Col>
             <Col className="col-12 col-lg-6 offset-lg-3">
               <InputGroup className="border-change">
@@ -243,9 +243,9 @@ const ContactMe = () => {
           </Row>
         </Container>
       </form>
-      <Container id="icons-wrap" className="mt-4">
+      {/* <Container id="icons-wrap" className="mt-4">
         <Icons />
-      </Container>
+      </Container> */}
     </Container>
   );
 };

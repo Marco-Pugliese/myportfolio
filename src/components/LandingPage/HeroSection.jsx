@@ -11,7 +11,6 @@ import {
   Telephone,
 } from "react-bootstrap-icons";
 import MyCarousel from "./MyCarousel";
-import Icons from "./Icons";
 
 const HeroSection = () => {
   const [hover1, isHover1] = useState(false);
@@ -30,9 +29,9 @@ const HeroSection = () => {
   const handleShow2 = () => setShow2(true);
 
   return (
-    <Container className="py-5 position-relative">
-      <Row className="justify-content-center text-center py-5">
-        <Col className="col-10 col-lg-7 py-5">
+    <Container className="pt-5 mt-5 position-relative">
+      <Row className="justify-content-center text-center py-5 my-5">
+        <Col className="col-10 col-lg-7 py-5 my-5">
           <div className="fs-3 text-gray">
             Hey there! I am{" "}
             <span className="fw-bold color-change-2y fs-2">Marco</span>
@@ -93,9 +92,9 @@ const HeroSection = () => {
           </span>
         </Col>
       </Row>
-      <Row className="pt-5 px-3">
-        <Col className="col-12">
-          <Row className="text-center ">
+      <Row className="pt-5 px-3 mt-5">
+        <Col className="col-12 mt-5">
+          <Row className="text-center mt-5 ">
             <Col className="col-12 p-0 m-0">
               <span className="extrasmall mb-0 pb-0 position-relative bottom-0">
                 SERVICES
@@ -268,9 +267,6 @@ const HeroSection = () => {
           </Modal.Body>
         </Modal>
       </>
-      <Container id="icons-wrap" className="mt-4">
-        <Icons />
-      </Container>
     </Container>
   );
 };

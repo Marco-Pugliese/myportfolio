@@ -16,7 +16,7 @@ const MyCarousel = () => {
           onMouseLeave={() => {
             isHoverCont1(false);
           }}
-          className="mx-3 px-5 py-2 bg-light rounded-3 darker-bg conthover position-relative"
+          className="mx-3 px-2 py-2 bg-light rounded-3 darker-bg conthover position-relative"
         >
           <div className="fs-6 p-2">
             <Braces className=" fs-4 " />
@@ -24,13 +24,13 @@ const MyCarousel = () => {
           <div
             className={
               hoverCont1 === true
-                ? "end-0 top-0 me-3 mt-3 fs-4 fw-bold border border-3 px-2 py-1 numberInCont rounded-circle position-absolute ishoverCont"
-                : "end-0 top-0 me-3 mt-3 fs-4 fw-bold border border-3 px-2 py-1 numberInCont rounded-circle position-absolute"
+                ? "end-0 top-0 me-3 mt-3 fs-4 fw-bold border border-3 ps-2 pe-1 py-1 numberInCont rounded-circle position-absolute ishoverCont"
+                : "end-0 top-0 me-3 mt-3 fs-4 fw-bold border border-3 ps-2 pe-1 py-1 numberInCont rounded-circle position-absolute"
             }
           >
             01
           </div>
-          <div className="py-3 fs-5 ">Web-Development</div>
+          <div className="py-3 fs-5 ">Web Development</div>
           <div
             className={
               hoverCont1 === true
@@ -38,7 +38,7 @@ const MyCarousel = () => {
                 : "border-bottom w-25 gray-border"
             }
           ></div>
-          <div className="py-3 smaller  ">
+          <div className="py-3 smaller">
             I use the knowledge of various programming language i've learned
             during my studies with EPICODE and other external courses
           </div>
@@ -52,7 +52,7 @@ const MyCarousel = () => {
           onMouseLeave={() => {
             isHoverCont2(false);
           }}
-          className="mx-3 bg-light px-5 py-2 rounded-3 darker-bg conthover position-relative"
+          className="mx-3 bg-light ps-2 pe-1 py-2 rounded-3 darker-bg conthover position-relative"
         >
           <div className="fw-bold fs-6  p-2">
             <CodeSlash className=" fs-4 " />
@@ -89,7 +89,7 @@ const MyCarousel = () => {
           onMouseLeave={() => {
             isHoverCont3(false);
           }}
-          className="mx-3 bg-light px-5 py-2 rounded-3 darker-bg conthover position-relative"
+          className="mx-3 bg-light ps-2 pe-1 py-2 rounded-3 darker-bg conthover position-relative"
         >
           <div className="fw-bold fs-6  p-2">
             <FiletypeJsx className=" fs-4 " />
@@ -103,7 +103,7 @@ const MyCarousel = () => {
           >
             03
           </div>
-          <div className="py-3 fs-5 ">Avantgarde!</div>
+          <div className="py-3 fs-5 ">Avantgarde</div>
           <div
             className={
               hoverCont3 === true

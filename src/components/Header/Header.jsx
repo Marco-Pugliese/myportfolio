@@ -112,16 +112,12 @@ const Header = () => {
                 onHide={handleClose}
                 className="bg-transparent"
               >
-                <Modal.Body id="modalbody" className="position-relative">
-                  <object
-                    data="/assets/media/pic/MyCv copia.pdf"
-                    type="application/pdf"
-                    width="100%"
-                    height="100%"
-                    className="rounded-3 border-sec"
-                  >
-                    O
-                  </object>
+                <Modal.Body id="modalbody">
+                  <img
+                    src="/assets/media/pic/MyCv copia_page-0001.jpg"
+                    alt="cv-img"
+                    id="cvImg"
+                  />
                   {loading && (
                     <div className="position-absolute top-50 start-50 translate-middle">
                       <Spinner
