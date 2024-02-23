@@ -4,14 +4,14 @@ const Education = () => {
   return (
     <Container id="education">
       <Row className="align-items-center">
-        <Col className="col-5 text-center px-4">
+        <Col className="col-12 col-lg-5 text-center px-4">
           <div className="fs-4 fw-bold ">Education</div>
           <div className="d-flex text-center">
             <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
             {/* <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div> */}
           </div>
 
-          <div className="mt-3">
+          <div className="my-3">
             <span className="contrast-text fst-italic">EPICODE</span> -{" "}
             <span className="smaller">2023/2024</span>
           </div>
@@ -95,15 +95,16 @@ const Education = () => {
         </Col>
       </Row>
 
-      <Row className="py-5 align-items-center">
-        <Col className="col-5 text-center px-4">
-          <div className="fs-4 fw-bold ">Other Courses</div>
+      <Row className="py-5 mt-5 align-items-center">
+        <Col className="col-12 col-lg-5 text-center px-4">
+          <div className="fs-4 fw-bold ">&& Courses</div>
           <div>
             <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
             {/* <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div> */}
           </div>
-          <div className="mt-3">
-            <span className="color-change-2y ">udemy</span> - 2023
+          <div className="my-3">
+            <span className="contrast-text fst-italic">UDEMY</span> -{" "}
+            <span className="smaller">2022/2024</span>
           </div>
         </Col>
         <Col>
