@@ -9,11 +9,15 @@
   --main-contrast: #2cb67d;
   --main-font: "Montserrat", sans-serif;
 }
+html {
+  overflow-x: hidden !important;
+}
 
 body {
-  width: 400vw;
+  width: 100vw;
 }
 #mydiv {
+  width: 400vw;
   transition: all 0.8s linear;
   display: flex;
   color: var(--main-gray);
@@ -299,8 +303,3 @@ img[alt~="epi-degree"]:hover {
   left: 0;
   transform: translateX(-100px);
 }
-
-/* 
-PER EVITARE NELLA SEZIONE MOBILE UNA VISUALIZZAZIONE INCORRETTA DEL CV DOVRO' INVERTIRE LA VISUALIZZAZIONE DEL CV CON IL DOWNLOAD:
-TOCCA CERCARE UN PACKAGE NPM PER IL DOWNLOAD DEL PDF
-*/

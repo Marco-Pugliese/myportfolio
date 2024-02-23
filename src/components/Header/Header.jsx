@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Container, Modal, Nav, Navbar, Spinner } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { ClipboardHeart } from "react-bootstrap-icons";
 import { useDispatch, useSelector } from "react-redux";
 import { switchSectionAction } from "../../Redux/Actions";
@@ -7,17 +7,18 @@ import { switchSectionAction } from "../../Redux/Actions";
 const Header = () => {
   const dispatch = useDispatch();
   const selectedPage = useSelector((state) => state.Page.pageSelected[0]);
-  const [show, setShow] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const handleClose = () => setShow(false);
-  const setIsLoading = () => setLoading(false);
-  const handleShow = () => {
-    setShow(true);
-    setLoading(true);
-    setTimeout(() => {
-      setIsLoading();
-    }, 5000);
-  };
+  const resume = "/assets/media/pic/MyCv copia.pdf";
+  // const [show, setShow] = useState(false);
+  // const [loading, setLoading] = useState(true);
+  // const handleClose = () => setShow(false);
+  // const setIsLoading = () => setLoading(false);
+  // const handleShow = () => {
+  //   setShow(true);
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setIsLoading();
+  //   }, 5000);
+  // };
   useEffect(() => {
     console.log(selectedPage);
   }, [selectedPage]);
@@ -38,7 +39,9 @@ const Header = () => {
     <>
       <Navbar
         expand="lg"
-        className={scrollTop > 30 ? "stickyHeader bgsolid " : "stickyHeader"}
+        className={
+          scrollTop > 30 ? "stickyHeader bgsolid my-2" : "stickyHeader my-2"
+        }
       >
         <Container className="px-5 ">
           <Navbar.Brand
@@ -100,14 +103,13 @@ const Header = () => {
               >
                 Contact Me!
               </span>
-              <span
-                className="display-inline-block resume rounded-3 ms-3 px-3 py-1"
-                onClick={handleShow}
-              >
-                View Resume <ClipboardHeart id="bag" className="fs-5" />
-              </span>
-
-              <Modal
+              <a href={resume} className="nav-link " download>
+                <span className="d-inline-block px-3 py-1 ms-3 resume rounded-3">
+                  Download Resume
+                  <ClipboardHeart id="bag" className="fs-5 ms-1" />
+                </span>
+              </a>
+              {/* <Modal
                 show={show}
                 onHide={handleClose}
                 className="bg-transparent"
@@ -117,7 +119,9 @@ const Header = () => {
                     src="/assets/media/pic/MyCv copia_page-0001.jpg"
                     alt="cv-img"
                     id="cvImg"
+                    className="d-none d-lg-block"
                   />
+
                   {loading && (
                     <div className="position-absolute top-50 start-50 translate-middle">
                       <Spinner
@@ -127,7 +131,7 @@ const Header = () => {
                     </div>
                   )}
                 </Modal.Body>
-              </Modal>
+              </Modal> */}
             </Nav>
           </Navbar.Collapse>
         </Container>
