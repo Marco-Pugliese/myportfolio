@@ -50,6 +50,8 @@ const ContactMe = () => {
       onClick={() => {
         // setClicked(true);
       }}
+      className="mt-5 pt-5"
+      id="contactme"
     >
       <div className="py-5 mt-5">
         <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
@@ -117,7 +119,7 @@ const ContactMe = () => {
                   }}
                 />
               </InputGroup>
-              <div className="py-3"></div>
+              <div className="py-3 d-none d-lg-block"></div>
             </Col>
             <Col className="col-12 col-lg-6 mt-5">
               <InputGroup className="border-change">
@@ -201,7 +203,7 @@ const ContactMe = () => {
                 )}
               </>
             </Col>
-            <Col className="col-10 offset-1 py-3">
+            <Col className="col-10 offset-1 py-3 mt-3">
               <Row className="text-center">
                 <Col className="text-center offset-1 col-4">
                   <button

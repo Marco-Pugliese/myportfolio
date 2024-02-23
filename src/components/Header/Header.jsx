@@ -39,11 +39,9 @@ const Header = () => {
     <>
       <Navbar
         expand="lg"
-        className={
-          scrollTop > 30 ? "stickyHeader bgsolid my-2" : "stickyHeader my-2"
-        }
+        className={scrollTop > 60 ? "stickyHeader bgsolid" : "stickyHeader"}
       >
-        <Container className="px-5 ">
+        <Container className="px-5 subHeader">
           <Navbar.Brand
             className="focus-in-contract text-gray pointer"
             onClick={() => {

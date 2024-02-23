@@ -56,13 +56,10 @@ body {
 #train {
   background: linear-gradient(to right, #16161a 0%, transparent 100%);
 }
-.bgsolid {
-  transition: all 0.8s;
-  background-color: #16161a;
-  border-bottom: 2px solid var(--main-gray);
-}
-.bgsolid:hover {
-  border-color: var(--main-contrast);
+#education,
+#aboutme,
+#contactme {
+  margin-top: 250px !important;
 }
 .darker-bg {
   background-color: #303034d0 !important;

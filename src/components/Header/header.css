@@ -1,7 +1,8 @@
 .stickyHeader {
-  transition: all 0.8s;
-  position: sticky;
+  transition: all 1.2s;
+  position: fixed;
   top: 0;
+  left: 0;
   overflow-x: hidden;
   z-index: 1000;
   width: 100vw;
@@ -9,5 +10,26 @@
 }
 
 .stickyHeader > div {
+  padding-top: 5px;
+}
+.bgsolid {
+  background-color: #16161a;
+  border-bottom: 2px solid var(--main-gray);
+}
+.bgsolid:hover {
+  border-color: var(--main-contrast);
+  transition: all 0.8s;
+}
+
+.navbar-toggler {
+  background-color: var(--main-contrast);
+  border-color: var(--main-contrast);
+  transition: all 0.8s;
+  height: 40px;
+  width: 60px;
   padding: 5px;
+}
+.collapsed {
+  background-color: var(--main-gray);
+  border-color: var(--main-gray);
 }

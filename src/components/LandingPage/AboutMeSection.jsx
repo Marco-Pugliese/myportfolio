@@ -7,7 +7,7 @@ const AboutMeSection = () => {
   const [netflixCloneHover, setNetflixCloneHover] = useState(false);
   return (
     <Container id="aboutme">
-      <Row className="py-5 align-items-center mb-5">
+      <Row className=" align-items-center ">
         <Col className="col-12 col-lg-5 text-center px-4 pb-4">
           <div className="fs-4 fw-bold "> EPICODE Capstone</div>
           <div className="d-flex text-center">

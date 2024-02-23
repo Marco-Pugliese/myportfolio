@@ -3,7 +3,7 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 const Education = () => {
   return (
     <Container id="education">
-      <Row className="py-5 align-items-center">
+      <Row className="align-items-center">
         <Col className="col-5 text-center px-4">
           <div className="fs-4 fw-bold ">Education</div>
           <div className="d-flex text-center">
