@@ -7,7 +7,7 @@ import { switchSectionAction } from "../../Redux/Actions";
 const Header = () => {
   const dispatch = useDispatch();
   const selectedPage = useSelector((state) => state.Page.pageSelected[0]);
-  const resume = "/assets/media/pic/MyCv copia.pdf";
+  const resume = "/assets/media/pic/CV-MarcoPugliese.pdf";
   // const [show, setShow] = useState(false);
   // const [loading, setLoading] = useState(true);
   // const handleClose = () => setShow(false);
