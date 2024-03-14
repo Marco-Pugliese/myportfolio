@@ -105,6 +105,7 @@ const ContactMe = () => {
                   Name
                 </InputGroup.Text>
                 <input
+                  autoComplete="OFF"
                   type="text"
                   required
                   name="user_name"
@@ -130,6 +131,7 @@ const ContactMe = () => {
                   eMail
                 </InputGroup.Text>
                 <input
+                  autoComplete="OFF"
                   type="email"
                   className="bg-transparent light-text form-control"
                   aria-label="email"
@@ -154,6 +156,7 @@ const ContactMe = () => {
                   Subject
                 </InputGroup.Text>
                 <input
+                  autoComplete="OFF"
                   required
                   className="bg-transparent light-text form-control"
                   aria-label="subject"
@@ -175,6 +178,7 @@ const ContactMe = () => {
                   Text
                 </InputGroup.Text>
                 <textarea
+                  autoComplete="OFF"
                   required
                   className="bg-transparent light-text form-control"
                   as="textarea"
@@ -211,7 +215,6 @@ const ContactMe = () => {
                     className="w-100 myBtn1 py-1 rounded-3"
                     onClick={(e) => {
                       e.preventDefault();
-
                       check();
                       isEverythingChecked === true
                         ? sendEmail()
