@@ -1,0 +1,123 @@
+#services {
+  width: 200vw;
+}
+
+.containerDiv {
+  width: 100%;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    white,
+    transparent
+  );
+  overflow: hidden;
+  display: flex;
+}
+.scroll,
+.scroll2,
+.scroll3,
+.scroll4,
+.scroll5,
+.scroll6 {
+  display: flex;
+  align-items: center;
+}
+.scroll img,
+.scroll2 img,
+.scroll3 img,
+.scroll4 img,
+.scroll5 img,
+.scroll6 img {
+  filter: grayscale(1);
+  transition: 0.3s;
+  width: 100px;
+}
+@media screen and (max-width: 600px) {
+  .scroll img,
+  .scroll2 img,
+  .scroll3 img,
+  .scroll4 img,
+  .scroll5 img,
+  .scroll6 img {
+    filter: grayscale(1);
+    transition: 0.3s;
+    width: 50px;
+  }
+}
+
+.scroll div img,
+.scroll div,
+.scroll2 div img,
+.scroll2 div,
+.scroll3 div img,
+.scroll3 div,
+.scroll4 div img,
+.scroll4 div,
+.scroll5 div img,
+.scroll5 div,
+.scroll6 div img,
+.scroll6 div {
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.scroll img:hover,
+.scroll2 img:hover,
+.scroll3 img:hover,
+.scroll4 img:hover,
+.scroll5 img:hover,
+.scroll6 img:hover {
+  filter: grayscale(0);
+  cursor: pointer;
+}
+
+@keyframes scroll1 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translate(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.scroll {
+  animation: scroll1 23s linear infinite;
+  /* animation: scroll1 23s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite; */
+}
+.scroll2 {
+  animation: scroll2 23s linear infinite;
+  /* animation: scroll2 23s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite; */
+}
+.scroll3 {
+  animation: scroll1 30s linear infinite;
+  /* animation: scroll1 30s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite; */
+}
+.scroll4 {
+  animation: scroll2 30s linear infinite;
+  /* animation: scroll2 30s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite; */
+}
+.scroll5 {
+  animation: scroll1 18s linear infinite;
+  /* animation: scroll1 18s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite; */
+}
+.scroll6 {
+  animation: scroll2 18s linear infinite;
+  /* animation: scroll2 18s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite; */
+}
+#heroIcons {
+  margin-top: 35vh;
+}
+
+#contactIcons {
+  margin-top: 25vh;
+}

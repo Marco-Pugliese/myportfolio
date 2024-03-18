@@ -248,9 +248,9 @@ const ContactMe = () => {
           </Row>
         </Container>
       </form>
-      {/* <Container id="icons-wrap" className="mt-4">
+      <Container id="contactIcons">
         <Icons />
-      </Container> */}
+      </Container>
     </Container>
   );
 };

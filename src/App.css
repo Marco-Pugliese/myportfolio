@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300;1,400;1,500&display=swap");
 @import url("../src/components/Header/header.css");
 @import url("./components/animation.css");
+@import url("./components/LandingPage/icons.css");
 :root {
   --main-dark: #16161a;
   --main-light: #fffffe;
@@ -59,7 +60,7 @@ body {
 #education,
 #aboutme,
 #contactme {
-  margin-top: 250px !important;
+  margin-top: 25vh !important;
 }
 .darker-bg {
   background-color: #303034d0 !important;
@@ -241,17 +242,17 @@ text-area:active,
 .udemy > div,
 img[alt~="epi-degree"] {
   background: transparent;
-  box-shadow: 0 0 30px -10px var(--main-contrast);
+  /* box-shadow: 0 0 30px -10px var(--main-contrast); */
   transition: all 0.8s;
 }
-#loremWeatherCarousel > div:hover,
+/* #loremWeatherCarousel > div:hover,
 .loremWeatherCarousel > div:hover,
 #NetFlicsCarousel > div:hover,
 #bardooCarousel > div:hover {
   box-shadow: 0 0 50px -10px var(--main-secondary);
   cursor: pointer;
   scale: 1.05;
-}
+} */
 
 .udemy > div:hover,
 img[alt~="epi-degree"]:hover {
@@ -299,4 +300,133 @@ img[alt~="epi-degree"]:hover {
   top: 0;
   left: 0;
   transform: translateX(-100px);
+}
+.pointer:hover {
+  cursor: pointer;
+}
+.v75 {
+  margin-top: 25vh;
+  margin-bottom: 25vh;
+  height: 50vh;
+}
+#bardooWork,
+#netflicsWork,
+#promusicWork {
+  min-height: 75vh;
+}
+.vh50 {
+  height: 60vh;
+  transition: 0.7s ease-in;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.vh50:hover {
+  box-shadow: 0 0 50px -10px var(--main-secondary);
+}
+
+.capstone1 {
+  background-image: url("../public/assets/media/works/bardoo\ .png");
+}
+.capstone2 {
+  background-image: url("../public/assets/media/works/bardoo1.png");
+}
+.capstone3 {
+  background-image: url("../public/assets/media/works/bardoo2.png");
+}
+.capstone4 {
+  background-image: url("../public/assets/media/works/bardoo3.png");
+}
+.capstone5 {
+  background-image: url("../public/assets/media/works/bardoo5.png");
+}
+.capstone6 {
+  background-image: url("../public/assets/media/works/bardoo7.png");
+}
+.capstone7 {
+  background-image: url("../public/assets/media/works/bardoo8.png");
+}
+.capstone8 {
+  background-image: url("../public/assets/media/works/bardoo9.png");
+}
+.capstone9 {
+  background-image: url("../public/assets/media/works/bardoo10.png");
+}
+.capstone10 {
+  background-image: url("../public/assets/media/works/bardoo11.png");
+}
+.capstone11 {
+  background-image: url("../public/assets/media/works/bardoo12.png");
+}
+.promusic1 {
+  background-image: url("../public/assets/media/works/Promusic.png");
+}
+.promusic2 {
+  background-image: url("../public/assets/media/works/Promusic2.png");
+}
+.promusic3 {
+  background-image: url("../public/assets/media/works/Promusic3.png");
+}
+.promusic4 {
+  background-image: url("../public/assets/media/works/Promusic4.png");
+}
+.promusic5 {
+  background-image: url("../public/assets/media/works/Promusic5.png");
+}
+.promusic6 {
+  background-image: url("../public/assets/media/works/Promusic6.png");
+}
+.promusic7 {
+  background-image: url("../public/assets/media/works/Promusic7.png");
+}
+.promusic8 {
+  background-image: url("../public/assets/media/works/Promusic8.png");
+}
+.promusic9 {
+  background-image: url("../public/assets/media/works/Promusic9.png");
+}
+.promusic10 {
+  background-image: url("../public/assets/media/works/Promusic10.png");
+}
+.netflics1 {
+  background-image: url("../public/assets/media/works/netflixClone.png");
+}
+.netflics2 {
+  background-image: url("../public/assets/media/works/netflixClone2.png");
+}
+.netflics3 {
+  background-image: url("../public/assets/media/works/netflixClone3.png");
+}
+.netflics4 {
+  background-image: url("../public/assets/media/works/netflixClone4.png");
+}
+
+.netflics1:hover,
+.netflics2:hover,
+.netflics3:hover,
+.netflics4:hover,
+.capstone1:hover,
+.capstone2:hover,
+.capstone3:hover,
+.capstone4:hover,
+.capstone5:hover,
+.capstone6:hover,
+.capstone7:hover,
+.capstone8:hover,
+.capstone9:hover,
+.capstone10:hover,
+.capstone11:hover,
+.promusic1:hover,
+.promusic2:hover,
+.promusic3:hover,
+.promusic4:hover,
+.promusic5:hover,
+.promusic6:hover,
+.promusic7:hover,
+.promusic8:hover,
+.promusic9:hover,
+.promusic10:hover {
+  scale: 1.2;
+  cursor: pointer;
 }

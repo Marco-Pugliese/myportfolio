@@ -111,9 +111,14 @@
 @keyframes color-change-2y {
   0% {
     color: var(--main-contrast);
+    letter-spacing: 0em;
+  }
+  50% {
+    letter-spacing: 0.2em;
   }
   100% {
     color: var(--main-secondary);
+    letter-spacing: 0em;
   }
 }
 
