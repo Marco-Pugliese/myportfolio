@@ -1,8 +1,9 @@
 import { Col, Container, InputGroup, Row } from "react-bootstrap";
 import { Envelope, Github, Linkedin } from "react-bootstrap-icons";
 import emailjs from "@emailjs/browser";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Icons from "./Icons";
+import ButtonToTop from "./ButtonToTop";
 
 const ContactMe = () => {
   const form = useRef();
@@ -20,6 +21,22 @@ const ContactMe = () => {
       : setIsEverythingChecked(false);
   };
   // const nothing = () => {};
+  const [scrollTop, setScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      setScrollTop(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  useEffect(() => {
+    console.log(scrollTop);
+  }, [scrollTop]);
 
   const sendEmail = () => {
     emailjs
@@ -46,212 +63,217 @@ const ContactMe = () => {
   //   // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, []);
   return (
-    <Container
-      onClick={() => {
-        // setClicked(true);
-      }}
-      className="mt-5 pt-5"
-      id="contactme"
-    >
-      <div className="py-5 mt-5">
-        <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
-        <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div>
-      </div>
-      <Row className="py-5 my-5">
-        <Col className="col-6 fs-1 fw-bold">LET'S GET IN TOUCH!</Col>
-        <Col>
-          <div className="d-flex align-items-center my-2">
-            <Envelope className="me-2 fs-4" /> :
-            <span className="mx-2">pugliesemarco@myyahoo.com</span>
-          </div>
-          <div className="d-flex align-items-center my-2">
-            <Linkedin className="me-2 fs-4" /> :
-            <a
-              className="nav-link mx-2"
-              href="https://www.linkedin.com/in/marco-pugliese-dev/"
-            >
-              linkedin.com/in/marco-pugliese-dev/
-            </a>
-          </div>
-          <div className="d-flex align-items-center my-2">
-            <Github className="me-2 fs-4" /> :
-            <a
-              className="nav-link mx-2"
-              href="https://github.com/Marco-Pugliese"
-            >
-              github.com/Marco-Pugliese
-            </a>
-          </div>
-        </Col>
-      </Row>
-      <div className="py-5 mt-5">
-        <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
-        <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div>
-      </div>
-      <form
-        ref={form}
-        onSubmit={(e) => {
-          e.preventDefault();
+    <>
+      <Container
+        onClick={() => {
+          // setClicked(true);
         }}
+        id="contactme"
+        className="v75"
       >
-        <Container className="mt-5 pt-5">
-          <Row className="pt-5 mt-5">
-            <Col className="col-12 col-lg-6 mt-5">
-              <InputGroup className="border-change">
-                <InputGroup.Text
-                  className="bg-transparent light-text"
-                  id="basic-addon1"
-                >
-                  Name
-                </InputGroup.Text>
-                <input
-                  autoComplete="OFF"
-                  type="text"
-                  required
-                  name="user_name"
-                  className="bg-transparent light-text form-control"
-                  aria-label="name"
-                  aria-describedby="basic-addon1"
-                  value={name}
-                  onChange={(e) => {
-                    setName(e.target.value);
-                    setShowError(false);
-                    setShowSend(false);
-                  }}
-                />
-              </InputGroup>
-              <div className="py-3 d-none d-lg-block"></div>
-            </Col>
-            <Col className="col-12 col-lg-6 mt-5">
-              <InputGroup className="border-change">
-                <InputGroup.Text
-                  className="bg-transparent light-text"
-                  id="basic-addon1"
-                >
-                  eMail
-                </InputGroup.Text>
-                <input
-                  autoComplete="OFF"
-                  type="email"
-                  className="bg-transparent light-text form-control"
-                  aria-label="email"
-                  aria-describedby="basic-addon1"
-                  name="user_email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    setShowError(false);
-                    setShowSend(false);
-                  }}
-                />
-              </InputGroup>
-              <div className="py-3"></div>
-            </Col>
-            <Col className="col-12 col-lg-6 offset-lg-3">
-              <InputGroup className="border-change">
-                <InputGroup.Text
-                  className="bg-transparent light-text"
-                  id="basic-addon1"
-                >
-                  Subject
-                </InputGroup.Text>
-                <input
-                  autoComplete="OFF"
-                  required
-                  className="bg-transparent light-text form-control"
-                  aria-label="subject"
-                  aria-describedby="basic-addon1"
-                  name="user_subject"
-                  value={subject}
-                  onChange={(e) => {
-                    setSubject(e.target.value);
-                    setShowError(false);
-                    setShowSend(false);
-                  }}
-                />
-              </InputGroup>
-            </Col>
-            <div className="py-3"></div>
-            <Col className="col-12 h-100">
-              <InputGroup className="border-change h-100">
-                <InputGroup.Text className="bg-transparent light-text ">
-                  Text
-                </InputGroup.Text>
-                <textarea
-                  autoComplete="OFF"
-                  required
-                  className="bg-transparent light-text form-control"
-                  as="textarea"
-                  aria-label="With textarea"
-                  name="message"
-                  value={message}
-                  onChange={(e) => {
-                    setMessage(e.target.value);
-                    setShowError(false);
-                    setShowSend(false);
-                  }}
-                />
-              </InputGroup>
-
-              <>
-                {showSend && (
-                  <div className="alert alert-success mt-3" role="alert">
-                    Your message has been sent properly!
-                  </div>
-                )}
-                {showError && (
-                  <div className="alert alert-danger mt-3" role="alert">
-                    Oooops. We had a problem on delivering your message, try
-                    again!
-                  </div>
-                )}
-              </>
-            </Col>
-            <Col className="col-10 offset-1 py-3 mt-3">
-              <Row className="text-center">
-                <Col className="text-center offset-1 col-4">
-                  <button
-                    type="submit"
-                    className="w-100 myBtn1 py-1 rounded-3"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      check();
-                      isEverythingChecked === true
-                        ? sendEmail()
-                        : setShowError(true);
-                      setName("");
-                      setEmail("");
-                      setSubject("");
-                      setMessage("");
-                    }}
-                  >
-                    Send
-                  </button>
+        <div>
+          <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
+          <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div>
+        </div>
+        <Row className="py-5 my-5">
+          <Col className="col-6 fs-1 fw-bold">LET'S GET IN TOUCH!</Col>
+          <Col>
+            <div className="d-flex align-items-center my-2">
+              <Envelope className="me-2 fs-4" /> :
+              <span className="mx-2">pugliesemarco@myyahoo.com</span>
+            </div>
+            <div className="d-flex align-items-center my-2">
+              <Linkedin className="me-2 fs-4" /> :
+              <a
+                className="nav-link mx-2"
+                href="https://www.linkedin.com/in/marco-pugliese-dev/"
+              >
+                linkedin.com/in/marco-pugliese-dev/
+              </a>
+            </div>
+            <div className="d-flex align-items-center my-2">
+              <Github className="me-2 fs-4" /> :
+              <a
+                className="nav-link mx-2"
+                href="https://github.com/Marco-Pugliese"
+              >
+                github.com/Marco-Pugliese
+              </a>
+            </div>
+          </Col>
+        </Row>
+        <div>
+          <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
+          <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray rotate-animation-180"></div>
+        </div>
+        <Container fluid className="v50">
+          <form
+            ref={form}
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+          >
+            <Container className="mt-5 pt-5">
+              <Row className="pt-5 mt-5">
+                <Col className="col-12 col-lg-6 mt-5">
+                  <InputGroup className="border-change">
+                    <InputGroup.Text
+                      className="bg-transparent light-text"
+                      id="basic-addon1"
+                    >
+                      Name
+                    </InputGroup.Text>
+                    <input
+                      autoComplete="OFF"
+                      type="text"
+                      required
+                      name="user_name"
+                      className="bg-transparent light-text form-control"
+                      aria-label="name"
+                      aria-describedby="basic-addon1"
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                        setShowError(false);
+                        setShowSend(false);
+                      }}
+                    />
+                  </InputGroup>
+                  <div className="py-3 d-none d-lg-block"></div>
                 </Col>
-                <Col className="col-1"></Col>
-                <Col className="text-center offset-1 col-4">
-                  <button
-                    type="button"
-                    className="w-100 myBtn2 py-1 rounded-3"
-                    onClick={(e) => {
-                      setName("");
-                      setEmail("");
-                      setSubject("");
-                      setMessage("");
-                    }}
-                  >
-                    Cancel
-                  </button>
+                <Col className="col-12 col-lg-6 mt-5">
+                  <InputGroup className="border-change">
+                    <InputGroup.Text
+                      className="bg-transparent light-text"
+                      id="basic-addon1"
+                    >
+                      eMail
+                    </InputGroup.Text>
+                    <input
+                      autoComplete="OFF"
+                      type="email"
+                      className="bg-transparent light-text form-control"
+                      aria-label="email"
+                      aria-describedby="basic-addon1"
+                      name="user_email"
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        setShowError(false);
+                        setShowSend(false);
+                      }}
+                    />
+                  </InputGroup>
+                  <div className="py-3"></div>
+                </Col>
+                <Col className="col-12 col-lg-6 offset-lg-3">
+                  <InputGroup className="border-change">
+                    <InputGroup.Text
+                      className="bg-transparent light-text"
+                      id="basic-addon1"
+                    >
+                      Subject
+                    </InputGroup.Text>
+                    <input
+                      autoComplete="OFF"
+                      required
+                      className="bg-transparent light-text form-control"
+                      aria-label="subject"
+                      aria-describedby="basic-addon1"
+                      name="user_subject"
+                      value={subject}
+                      onChange={(e) => {
+                        setSubject(e.target.value);
+                        setShowError(false);
+                        setShowSend(false);
+                      }}
+                    />
+                  </InputGroup>
+                </Col>
+                <div className="py-3"></div>
+                <Col className="col-12 h-100">
+                  <InputGroup className="border-change h-100">
+                    <InputGroup.Text className="bg-transparent light-text ">
+                      Text
+                    </InputGroup.Text>
+                    <textarea
+                      autoComplete="OFF"
+                      required
+                      className="bg-transparent light-text form-control"
+                      as="textarea"
+                      aria-label="With textarea"
+                      name="message"
+                      value={message}
+                      onChange={(e) => {
+                        setMessage(e.target.value);
+                        setShowError(false);
+                        setShowSend(false);
+                      }}
+                    />
+                  </InputGroup>
+
+                  <>
+                    {showSend && (
+                      <div className="alert alert-success mt-3" role="alert">
+                        Your message has been sent properly!
+                      </div>
+                    )}
+                    {showError && (
+                      <div className="alert alert-danger mt-3" role="alert">
+                        Oooops. We had a problem on delivering your message, try
+                        again!
+                      </div>
+                    )}
+                  </>
+                </Col>
+                <Col className="col-10 offset-1 py-3 mt-3">
+                  <Row className="text-center">
+                    <Col className="text-center offset-1 col-4">
+                      <button
+                        type="submit"
+                        className="w-100 myBtn1 py-1 rounded-3"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          check();
+                          isEverythingChecked === true
+                            ? sendEmail()
+                            : setShowError(true);
+                          setName("");
+                          setEmail("");
+                          setSubject("");
+                          setMessage("");
+                        }}
+                      >
+                        Send
+                      </button>
+                    </Col>
+                    <Col className="col-1"></Col>
+                    <Col className="text-center offset-1 col-4">
+                      <button
+                        type="button"
+                        className="w-100 myBtn2 py-1 rounded-3"
+                        onClick={(e) => {
+                          setName("");
+                          setEmail("");
+                          setSubject("");
+                          setMessage("");
+                        }}
+                      >
+                        Cancel
+                      </button>
+                    </Col>
+                  </Row>
                 </Col>
               </Row>
-            </Col>
-          </Row>
+            </Container>
+          </form>
         </Container>
-      </form>
-      <Container id="contactIcons">
-        <Icons />
+        <Container className="top50">
+          <Icons />
+          {scrollTop > 600 && <ButtonToTop />}
+        </Container>
       </Container>
-    </Container>
+    </>
   );
 };
 export default ContactMe;

@@ -5,7 +5,7 @@ import WorkNetflics from "./WorkNetflics";
 
 const AboutMeSection = () => {
   return (
-    <Container fluid id="aboutme" className="p-0 m-0">
+    <Container fluid className="p-0 m-0">
       <WorkPromusic />
       <WorkBardoo />
       <WorkNetflics />

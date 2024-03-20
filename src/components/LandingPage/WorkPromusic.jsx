@@ -4,8 +4,8 @@ import { Carousel, Col, Row } from "react-bootstrap";
 const WorkPromusic = () => {
   const [proMusicHovered, setProMusicHovered] = useState(false);
   return (
-    <Row id="promusicWork" className="p-0 m-0 px-5">
-      <Col className="p-0 m-0  col-lg-5 d-flex flex-column align-items-center justify-content-center">
+    <Row id="promusicWork" className="p-0 mx-0 v70">
+      <Col className="p-0 m-0 col-lg-5 d-flex flex-column align-items-center justify-content-center">
         <div
           className="px-5 fs-5 text-center pointer"
           onClick={() => {
@@ -17,7 +17,7 @@ const WorkPromusic = () => {
             Associazione Culturale e Musicale
           </div>
         </div>
-        <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
+        <div className="width-changing pt-0 mb-0 border-bottom gray-border border-shadow-gray"></div>
         <div
           onMouseEnter={() => {
             setProMusicHovered(true);
@@ -25,9 +25,9 @@ const WorkPromusic = () => {
           onMouseLeave={() => {
             setProMusicHovered(false);
           }}
-          className="hover mb-5"
+          className="hover mb-2"
         >
-          <div className="px-5  fs-6 d-flex align-items-center justify-content-center mt-3">
+          <div className="px-5  fs-6 d-flex align-items-center justify-content-center">
             <span
               className={proMusicHovered === true ? "me-1 pointer" : "me-1 "}
               onClick={() => {

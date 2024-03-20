@@ -4,7 +4,7 @@ import { Carousel, Col, Row } from "react-bootstrap";
 const WorkNetflics = () => {
   const [netflicsHovered, setNetflicsHovered] = useState(false);
   return (
-    <Row id="netflicsWork" className="ps-5 m-0 justify-content-center">
+    <Row id="netflicsWork" className="pb-2 m-0 justify-content-center">
       <Col className="p-0 m-0 col-lg-5 d-flex flex-column align-items-center justify-content-center">
         <div className="px-5 fs-5 text-center color-change-2y">NETFLICS</div>
         <div className="width-changing pt-0 mb-0  border-bottom gray-border border-shadow-gray "></div>
@@ -15,7 +15,7 @@ const WorkNetflics = () => {
           onMouseLeave={() => {
             setNetflicsHovered(false);
           }}
-          className="hover mb-5"
+          className="hover mb-2"
         >
           <div className="px-5  fs-6 d-flex align-items-center justify-content-center mt-3">
             <span

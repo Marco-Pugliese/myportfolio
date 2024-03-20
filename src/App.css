@@ -57,11 +57,7 @@ body {
 #train {
   background: linear-gradient(to right, #16161a 0%, transparent 100%);
 }
-#education,
-#aboutme,
-#contactme {
-  margin-top: 25vh !important;
-}
+
 .darker-bg {
   background-color: #303034d0 !important;
   border: 1.6px solid var(--main-contrast);
@@ -305,9 +301,12 @@ img[alt~="epi-degree"]:hover {
   cursor: pointer;
 }
 .v75 {
-  margin-top: 25vh;
-  margin-bottom: 25vh;
+  margin-top: 30vh;
+  margin-bottom: 20vh;
   height: 50vh;
+}
+.v70 {
+  margin-top: 23vh;
 }
 #bardooWork,
 #netflicsWork,
@@ -322,6 +321,9 @@ img[alt~="epi-degree"]:hover {
   background-repeat: no-repeat;
 }
 
+.top50 {
+  margin-top: 50vh;
+}
 .vh50:hover {
   box-shadow: 0 0 50px -10px var(--main-secondary);
 }
@@ -429,4 +431,16 @@ img[alt~="epi-degree"]:hover {
 .promusic10:hover {
   scale: 1.2;
   cursor: pointer;
+}
+.arrowUpTop {
+  transform: translateY(-80vh) !important;
+}
+.arrowUpMidTop {
+  transform: translateY(-55vh) !important;
+}
+.arrowUpDownTop {
+  transform: translateY(5vh) !important;
+}
+.arrowUpDownBott {
+  transform: translateY(30vh) !important;
 }

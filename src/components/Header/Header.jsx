@@ -23,6 +23,7 @@ const Header = () => {
     console.log(selectedPage);
   }, [selectedPage]);
   const [scrollTop, setScrollTop] = useState(0);
+  const [navDarker, setNavDarker] = useState(false);
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -50,7 +51,21 @@ const Header = () => {
           >
             LessIsMore <span className="fw-bold a-left color-change-2y">.</span>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle
+            onClick={() => {
+              setNavDarker(!navDarker);
+            }}
+            className={navDarker === true ? "d-none" : ""}
+            aria-controls="basic-navbar-nav"
+          />
+          <Navbar.Toggle
+            onClick={() => {
+              setNavDarker(!navDarker);
+            }}
+            className={navDarker === false ? "d-none" : "contrast-bg"}
+            aria-controls="basic-navbar-nav"
+          />
+
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto nav d-flex align-items-center text-gray">
               <span
@@ -64,6 +79,7 @@ const Header = () => {
                 }}
               >
                 Home
+                <a name="top"></a>
               </span>
               <span
                 className={

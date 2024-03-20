@@ -2,8 +2,8 @@ import { Carousel, Col, Container, Row } from "react-bootstrap";
 
 const Education = () => {
   return (
-    <Container id="education">
-      <Row className="align-items-center">
+    <Container>
+      <Row className="align-items-center v75">
         <Col className="col-12 col-lg-5 text-center px-4">
           <div className="fs-4 fw-bold ">Education</div>
           <div className="d-flex text-center">

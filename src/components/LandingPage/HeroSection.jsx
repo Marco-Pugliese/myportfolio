@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Modal, Row } from "react-bootstrap";
 import {
   Braces,
@@ -12,6 +12,7 @@ import {
 } from "react-bootstrap-icons";
 import MyCarousel from "./MyCarousel";
 import Icons from "./Icons";
+import ButtonToTop from "./ButtonToTop";
 
 const HeroSection = () => {
   const [hover1, isHover1] = useState(false);
@@ -28,6 +29,22 @@ const HeroSection = () => {
   const handleShow1 = () => setShow1(true);
   const handleClose2 = () => setShow2(false);
   const handleShow2 = () => setShow2(true);
+  const [scrollTop, setScrollTop] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      setScrollTop(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  useEffect(() => {
+    console.log(scrollTop);
+  }, [scrollTop]);
 
   return (
     <>
@@ -281,8 +298,9 @@ const HeroSection = () => {
           </Modal.Body>
         </Modal>
       </>
-      <Container id="heroIcons">
+      <Container className="top50">
         <Icons />
+        {scrollTop > 600 && <ButtonToTop />}
       </Container>
     </>
   );

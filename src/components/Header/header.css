@@ -22,14 +22,18 @@
 }
 
 .navbar-toggler {
-  background-color: var(--main-contrast);
-  border-color: var(--main-contrast);
+  background-color: var(--main-gray);
   transition: all 0.8s;
   height: 40px;
   width: 60px;
   padding: 5px;
 }
-.collapsed {
-  background-color: var(--main-gray);
-  border-color: var(--main-gray);
+
+.navbar-toggle2 {
+  background-color: var(--main-contrast);
+  width: 12vw;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  text-align: center;
+  border-radius: 5px;
 }
