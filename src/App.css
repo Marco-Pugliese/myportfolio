@@ -444,3 +444,6 @@ img[alt~="epi-degree"]:hover {
 .arrowUpDownBott {
   transform: translateY(30vh) !important;
 }
+.darkerNav {
+  background: rgba(0, 0, 0, 0.3);
+}

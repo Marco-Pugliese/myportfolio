@@ -40,7 +40,13 @@ const Header = () => {
     <>
       <Navbar
         expand="lg"
-        className={scrollTop > 60 ? "stickyHeader bgsolid" : "stickyHeader"}
+        className={
+          scrollTop > 25
+            ? "stickyHeader bgsolid"
+            : scrollTop < 25 && navDarker === true
+            ? "stickyHeader darkerNav"
+            : "stickyHeader"
+        }
       >
         <Container className="px-5 subHeader">
           <Navbar.Brand
@@ -117,7 +123,7 @@ const Header = () => {
               >
                 Contact Me!
               </span>
-              <a href={resume} className="nav-link " download>
+              <a href={resume} className="nav-link p-0 m-0" download>
                 <span className="d-inline-block px-3 py-1 ms-3 resume rounded-3">
                   Download Resume
                   <ClipboardHeart id="bag" className="fs-5 ms-1" />
