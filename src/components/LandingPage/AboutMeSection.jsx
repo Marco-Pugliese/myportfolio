@@ -7,7 +7,9 @@ import InProgress from "./InProgress";
 const AboutMeSection = () => {
   return (
     <Container fluid className="p-0 m-0">
-      <InProgress />
+      <div className="pt-5">
+        <InProgress />
+      </div>
       {/* <WorkPromusic />
       <WorkBardoo />
       <WorkNetflics /> */}

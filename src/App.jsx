@@ -1,6 +1,5 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
 import Header from "./components/Header/Header";
+import "./App.css";
 import { Container } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import AboutMeSection from "./components/LandingPage/AboutMeSection";

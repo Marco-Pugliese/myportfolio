@@ -163,7 +163,7 @@ const HeroSection = () => {
                     isHoverCont1(false);
                   }}
                   fluid
-                  className="bg-light rounded-3 darker-bg conthover position-relative"
+                  className="bg-gray rounded-3 darker-bg conthover position-relative"
                 >
                   <div className="fs-6 p-2">
                     <Braces className=" fs-4 " />
@@ -201,7 +201,7 @@ const HeroSection = () => {
                     isHoverCont2(false);
                   }}
                   fluid
-                  className=" bg-light rounded-3 darker-bg conthover position-relative"
+                  className=" bg-gray rounded-3 darker-bg conthover position-relative"
                 >
                   <div className="fw-bold fs-6  p-2">
                     <CodeSlash className=" fs-4 " />
@@ -239,7 +239,7 @@ const HeroSection = () => {
                     isHoverCont3(false);
                   }}
                   fluid
-                  className=" bg-light rounded-3 darker-bg conthover position-relative"
+                  className=" bg-gray rounded-3 darker-bg conthover position-relative"
                 >
                   <div className="fw-bold fs-6  p-2">
                     <FiletypeJsx className=" fs-4 " />

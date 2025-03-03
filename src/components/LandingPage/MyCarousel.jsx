@@ -16,7 +16,7 @@ const MyCarousel = () => {
           onMouseLeave={() => {
             isHoverCont1(false);
           }}
-          className="mx-3 px-2 py-2 bg-light rounded-3 darker-bg conthover position-relative"
+          className="mx-3 px-2 py-2 rounded-3 darker-bg conthover position-relative bg-gray"
         >
           <div className="fs-6 p-2">
             <Braces className=" fs-4 " />
@@ -52,7 +52,7 @@ const MyCarousel = () => {
           onMouseLeave={() => {
             isHoverCont2(false);
           }}
-          className="mx-3 bg-light ps-2 pe-1 py-2 rounded-3 darker-bg conthover position-relative"
+          className="mx-3 px-2 py-2 rounded-3 darker-bg conthover position-relative bg-gray"
         >
           <div className="fw-bold fs-6  p-2">
             <CodeSlash className=" fs-4 " />
@@ -89,9 +89,9 @@ const MyCarousel = () => {
           onMouseLeave={() => {
             isHoverCont3(false);
           }}
-          className="mx-3 bg-light ps-2 pe-1 py-2 rounded-3 darker-bg conthover position-relative"
+          className="mx-3 px-2 py-2 rounded-3 darker-bg conthover position-relative bg-gray"
         >
-          <div className="fw-bold fs-6  p-2">
+          <div className="fw-bold fs-6 p-2">
             <FiletypeJsx className=" fs-4 " />
           </div>
           <div
